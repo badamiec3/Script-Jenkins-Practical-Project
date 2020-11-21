@@ -20,11 +20,16 @@ pipeline {
         steps {
           sh 'pwd'
           sh 'echo "hi"'
+          sh 'chmod a+x ./scripts/docker-push-frontend.sh'
+          sh './scripts/docker-push-frontend.sh'
         }
       }
      stage('docker build and push backend') {
         steps {
+          sh 'pwd'
           sh 'echo "hi"'
+          sh 'chmod a+x ./scripts/docker-push-backend.sh'
+          sh './scripts/docker-push-backend.sh'
         }
       }
    }
