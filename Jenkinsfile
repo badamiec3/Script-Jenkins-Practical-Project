@@ -13,7 +13,7 @@ pipeline {
       }
     stage('docker login') {
         steps {
-          sh 'docker login --username=${DOCKER_USER} --password=${DOCKER_PASSWORD}'
+          sh 'sudo docker login --username=${DOCKER_USER} --password=${DOCKER_PASSWORD}'
         }
       }
    }
