@@ -16,6 +16,17 @@ pipeline {
           sh 'sudo docker login --username=${DOCKER_USER} --password=${DOCKER_PASSWORD}'
         }
       }
+    stage('docker build and push frontend') {
+        steps {
+          sh 'pwd'
+          sh 'echo "hi"'
+        }
+      }
+     stage('docker build and push backend') {
+        steps {
+          sh 'echo "hi"'
+        }
+      }
    }
 }
 
